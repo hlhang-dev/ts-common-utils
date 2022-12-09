@@ -1,0 +1,23 @@
+{
+  "name": "ts-dev-common-utils",
+  "version": "1.0.0",
+  "description": "a ts common utils",
+  "main": "src/index.ts",
+  "buildOptions": {
+    "name": "@lasted/shared",
+    "formats": [
+      "cjs",
+      "esm-bundler"
+    ]
+  },
+  "files": [
+    "src"
+  ],
+  "dependencies": {
+    "class-validator": "^0.13.2",
+    "json2typescript": "^1.5.1",
+    "reflect-metadata": "^0.1.13",
+    "tslib": "^2.4.1",
+    "typescript": "^4.9.4"
+  }
+}

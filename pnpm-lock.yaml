@@ -1,0 +1,65 @@
+lockfileVersion: 5.4
+
+specifiers:
+  class-validator: ^0.13.2
+  json2typescript: ^1.5.1
+  reflect-metadata: ^0.1.13
+  tslib: ^2.4.1
+  typescript: ^4.9.4
+
+dependencies:
+  class-validator: registry.npmmirror.com/class-validator/0.13.2
+  json2typescript: registry.npmmirror.com/json2typescript/1.5.1
+  reflect-metadata: registry.npmmirror.com/reflect-metadata/0.1.13
+  tslib: registry.npmmirror.com/tslib/2.4.1
+  typescript: registry.npmmirror.com/typescript/4.9.4
+
+packages:
+
+  registry.npmmirror.com/class-validator/0.13.2:
+    resolution: {integrity: sha512-yBUcQy07FPlGzUjoLuUfIOXzgynnQPPruyK1Ge2B74k9ROwnle1E+NxLWnUv5OLU8hA/qL5leAE9XnXq3byaBw==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/class-validator/-/class-validator-0.13.2.tgz}
+    name: class-validator
+    version: 0.13.2
+    dependencies:
+      libphonenumber-js: registry.npmmirror.com/libphonenumber-js/1.10.14
+      validator: registry.npmmirror.com/validator/13.7.0
+    dev: false
+
+  registry.npmmirror.com/json2typescript/1.5.1:
+    resolution: {integrity: sha512-mkuZR1O+rMPnWW1ROJJlY56aWWa71jYEmF5eIp52PlvcbNC9dWsFf8xAByRHWMbOTVbQYIb2vfndA66ibihPZg==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/json2typescript/-/json2typescript-1.5.1.tgz}
+    name: json2typescript
+    version: 1.5.1
+    dev: false
+
+  registry.npmmirror.com/libphonenumber-js/1.10.14:
+    resolution: {integrity: sha512-McGS7GV/WjJ2KjfOGhJU1oJn29RYeo7Q+RpANRbUNMQ9gj5XArpbjurSuyYPTejFwbaUojstQ4XyWCrAzGOUXw==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/libphonenumber-js/-/libphonenumber-js-1.10.14.tgz}
+    name: libphonenumber-js
+    version: 1.10.14
+    dev: false
+
+  registry.npmmirror.com/reflect-metadata/0.1.13:
+    resolution: {integrity: sha512-Ts1Y/anZELhSsjMcU605fU9RE4Oi3p5ORujwbIKXfWa+0Zxs510Qrmrce5/Jowq3cHSZSJqBjypxmHarc+vEWg==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/reflect-metadata/-/reflect-metadata-0.1.13.tgz}
+    name: reflect-metadata
+    version: 0.1.13
+    dev: false
+
+  registry.npmmirror.com/tslib/2.4.1:
+    resolution: {integrity: sha512-tGyy4dAjRIEwI7BzsB0lynWgOpfqjUdq91XXAlIWD2OwKBH7oCl/GZG/HT4BOHrTlPMOASlMQ7veyTqpmRcrNA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/tslib/-/tslib-2.4.1.tgz}
+    name: tslib
+    version: 2.4.1
+    dev: false
+
+  registry.npmmirror.com/typescript/4.9.4:
+    resolution: {integrity: sha512-Uz+dTXYzxXXbsFpM86Wh3dKCxrQqUcVMxwU54orwlJjOpO3ao8L7j5lH+dWfTwgCwIuM9GQ2kvVotzYJMXTBZg==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/typescript/-/typescript-4.9.4.tgz}
+    name: typescript
+    version: 4.9.4
+    engines: {node: '>=4.2.0'}
+    hasBin: true
+    dev: false
+
+  registry.npmmirror.com/validator/13.7.0:
+    resolution: {integrity: sha512-nYXQLCBkpJ8X6ltALua9dRrZDHVYxjJ1wgskNt1lH9fzGjs3tgojGSCBjmEPwkWS1y29+DrizMTW19Pr9uB2nw==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/validator/-/validator-13.7.0.tgz}
+    name: validator
+    version: 13.7.0
+    engines: {node: '>= 0.10'}
+    dev: false
