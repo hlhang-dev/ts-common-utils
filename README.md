@@ -1,1 +1,1 @@
-# A TypeScript Common Utils
+# A TypeScript Common Utils Library
