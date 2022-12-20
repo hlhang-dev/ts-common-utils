@@ -27,4 +27,6 @@ export { StringToYuanConverter } from './converter/json-ts/StringToYuanConverter
 
 export { ConcurrentHashMap } from './map/ConcurrentHashMap'
 
+export { UtilsInit } from './utils/UtilsInit'
+
 
