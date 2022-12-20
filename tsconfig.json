@@ -10,16 +10,11 @@
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "sourceMap": true,
+    "sourceMap": false,
     "skipLibCheck": true,
     "noImplicitAny": false,
     "baseUrl": ".",
-    "types": [
-      "webpack-env",
-      "@dcloudio/types",
-      "miniprogram-api-typings",
-      "mini-types"
-    ],
+    "outDir": "./dist",
     "paths": {
       "tslib": [
         "node_modules/tslib/tslib.d.ts"

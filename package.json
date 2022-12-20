@@ -1,18 +1,19 @@
 {
   "name": "ts-dev-common-utils",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a ts common utils",
   "main": "src/index.ts",
-  "buildOptions": {
-    "name": "@lasted/shared",
-    "formats": [
-      "cjs",
-      "esm-bundler"
-    ]
-  },
+  "author": "hlhang",
+  "license": "ISC",
   "files": [
     "src"
   ],
+  "keywords": [
+    "Utils"
+  ],
+  "scripts": {
+    "build": "tsc"
+  },
   "dependencies": {
     "class-validator": "^0.13.2",
     "json2typescript": "^1.5.1",
