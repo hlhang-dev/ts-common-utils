@@ -12,7 +12,8 @@
     "Utils"
   ],
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "publish": "npm publish"
   },
   "dependencies": {
     "class-validator": "^0.13.2",
