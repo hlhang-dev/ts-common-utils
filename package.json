@@ -1,6 +1,6 @@
 {
   "name": "ts-dev-common-utils",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "a ts common utils",
   "main": "src/index.ts",
   "author": "hlhang",
