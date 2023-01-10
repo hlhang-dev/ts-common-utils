@@ -3,6 +3,10 @@ export class Utils {
     return object && typeof object === 'boolean'
   }
 
+  public static isValidPhone (phone: string) {
+    return /^1[0-9]{10}$/.test(phone)
+  }
+
   public static hasValue<T>(param: T) {
     let hasValue: boolean
     if (param === undefined || param === null) {

@@ -69,8 +69,10 @@ export class ArrayUtils {
 
   public static sortByTimestamp<T extends object> (property: string, isRise: boolean) {
     return function (currentArrayItem: T , changeArrayItem: T) {
-      const currentArrayProperty = currentArrayItem[property]
-      const changeArrayProperty = changeArrayItem[property]
+      // @ts-ignore
+      const currentArrayProperty = <any>currentArrayItem[property]
+      // @ts-ignore
+      const changeArrayProperty = <any>changeArrayItem[property]
       if(isRise){
         return currentArrayProperty - changeArrayProperty
       }else{

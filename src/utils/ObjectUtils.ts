@@ -1,3 +1,5 @@
+import { Utils } from './Utils'
+
 export class ObjectUtils {
 
   public static isEmpty<T extends object>(obj: T): boolean {
@@ -15,8 +17,10 @@ export class ObjectUtils {
   public static appendToFomData<T> (obj: T) {
     const formData = new FormData()
     for (const key in obj) {
-      if (obj[key]) {
-        formData.append(key,obj[key] as string)
+      const itemValue = obj[key]
+      if (Utils.hasValue(itemValue)) {
+        // @ts-ignore
+        formData.append(key,<string>itemValue)
       }
     }
 

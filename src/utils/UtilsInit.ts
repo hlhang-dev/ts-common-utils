@@ -6,7 +6,7 @@ import {StringToDateConverter} from "../converter/json-ts/StringToDateConerter";
  * @date  2022/12/20
  */
 export class UtilsInit {
-    init(conversionToSeconds: number = 0) {
+    public static init(conversionToSeconds: number = 0) {
         StringToDateConverter.conversionToSeconds = conversionToSeconds
     }
 }
