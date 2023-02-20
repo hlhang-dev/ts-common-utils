@@ -1,6 +1,7 @@
-lockfileVersion: 5.4
+lockfileVersion: 5.3
 
 specifiers:
+  '@types/node': ^18.11.17
   class-validator: ^0.13.2
   json2typescript: ^1.5.1
   reflect-metadata: ^0.1.13
@@ -14,7 +15,14 @@ dependencies:
   tslib: registry.npmmirror.com/tslib/2.4.1
   typescript: registry.npmmirror.com/typescript/4.9.4
 
+devDependencies:
+  '@types/node': 18.14.0
+
 packages:
+
+  /@types/node/18.14.0:
+    resolution: {integrity: sha512-5EWrvLmglK+imbCJY0+INViFWUHg1AHel1sq4ZVSfdcNqGy9Edv3UB9IIzzg+xPaUcAgZYcfVs2fBcwDeZzU0A==}
+    dev: true
 
   registry.npmmirror.com/class-validator/0.13.2:
     resolution: {integrity: sha512-yBUcQy07FPlGzUjoLuUfIOXzgynnQPPruyK1Ge2B74k9ROwnle1E+NxLWnUv5OLU8hA/qL5leAE9XnXq3byaBw==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/class-validator/-/class-validator-0.13.2.tgz}

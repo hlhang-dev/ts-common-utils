@@ -61,4 +61,9 @@ export class StringUtils {
   public static isSame(str: string, secondStr: string) {
     return str === secondStr
   }
+
+  public static isCorrectMobilePhoneFormat (phone: string) {
+    return /^1[0-9]{10}$/.test(phone)
+
+  }
 }
