@@ -1,4 +1,4 @@
-export default class CountdownCounter {
+export class CountdownCounter {
 
   private countdownNumber: number
   private timer!: NodeJS.Timer
