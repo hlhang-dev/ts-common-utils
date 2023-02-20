@@ -24,6 +24,7 @@ export { StringToDateConverter } from './converter/json-ts/StringToDateConerter'
 export { StringToFloatConverter } from './converter/json-ts/StringToFloatConverter'
 export { StringToNumConverter } from './converter/json-ts/StringToNumConverter'
 export { StringToYuanConverter } from './converter/json-ts/StringToYuanConverter'
+export { StringToYMLDemConverter } from './converter/json-ts/StringToYMLDemConverter'
 
 export { ConcurrentHashMap } from './map/ConcurrentHashMap'
 
