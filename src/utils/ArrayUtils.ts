@@ -67,6 +67,14 @@ export class ArrayUtils {
     arr.push.apply(arr, sliced)
   }
 
+  public static manualPaging<T>  (arr: Array<T>,limit: number = 10) {
+    let newArr: Array<Array<T>> = []
+    for (let i = 0; i < arr.length; i += limit) {
+      newArr.push(arr.slice(i, i + limit))
+    }
+    return newArr
+  }
+
   public static sortByTimestamp<T extends object> (property: string, isRise: boolean) {
     return function (currentArrayItem: T , changeArrayItem: T) {
       // @ts-ignore
