@@ -1,9 +1,9 @@
-import { StringUtils } from './StringUtils'
 import SystemTimerMap from './SystemTimerMap'
+import { UuIdUtils } from './UuIdUtils'
 
 
-export default class CountDownTimer {
-    private countdownId: string = StringUtils.getRandomStr()
+export class CountDownTimer {
+    private readonly countdownId: string = ''
 
     private second: number
 
@@ -11,9 +11,10 @@ export default class CountDownTimer {
 
     private readonly callback: (residueDegree: number) => void
 
-    constructor(second: number, callback: (residueDegree: number) => void) {
+    constructor(second: number, callback: (residueDegree: number) => void,countdownId: string) {
         this.second = second
         this.callback = callback
+        this.countdownId = countdownId || UuIdUtils.getInstance().generateUuid(64)
     }
 
     private checkCurrentTimer() {
@@ -36,8 +37,10 @@ export default class CountDownTimer {
     }
 
     stopCountdown() {
-        clearInterval(this.timer)
-        SystemTimerMap.delete(this.countdownId)
+        if (this.timer) {
+            clearInterval(this.timer)
+            SystemTimerMap.delete(this.countdownId)
+        }
     }
 
     pauseCountdown() {
