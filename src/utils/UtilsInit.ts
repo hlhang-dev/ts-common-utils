@@ -1,4 +1,5 @@
-import {StringToDateConverter} from "../converter/json-ts/StringToDateConerter";
+import { CountDownTimer } from './CountDownTimer'
+import { DateUtils } from './DateUtils'
 
 /**
  * @author  heninghang
@@ -6,7 +7,8 @@ import {StringToDateConverter} from "../converter/json-ts/StringToDateConerter";
  * @date  2022/12/20
  */
 export class UtilsInit {
-    public static init(conversionToSeconds: number = 0) {
-        StringToDateConverter.conversionToSeconds = conversionToSeconds
+    public static init(conversionToSeconds: number = 1) {
+        DateUtils.secondLevel = conversionToSeconds
+        CountDownTimer.secondLevel = conversionToSeconds
     }
 }

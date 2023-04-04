@@ -8,6 +8,6 @@ export class StringToYMLDemConverter implements JsonCustomConvert<string> {
     return null
   }
   deserialize (data: string): string {
-    return DateUtils.formatterYMDhmByTimeStamp(Number(data) * StringToYMLDemConverter.conversionToSeconds)
+    return DateUtils.getInstance(Number(data)).formatterYMDhmByTimeStamp()
   }
 }
