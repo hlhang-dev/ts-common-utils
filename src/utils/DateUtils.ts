@@ -9,7 +9,8 @@ export class DateUtils {
         if (!DateUtils._instance) {
             DateUtils._instance = new DateUtils()
         }
-        DateUtils.nowDate = new Date(timeStamp * DateUtils.secondLevel)
+        DateUtils.nowDate = new Date()
+        DateUtils.nowDate.setTime(timeStamp / DateUtils.secondLevel)
         return DateUtils._instance
     }
 

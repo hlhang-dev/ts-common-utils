@@ -1,4 +1,3 @@
-import { CountDownTimer } from './CountDownTimer'
 import { DateUtils } from './DateUtils'
 
 /**
@@ -9,6 +8,5 @@ import { DateUtils } from './DateUtils'
 export class UtilsInit {
     public static init(conversionToSeconds: number = 1) {
         DateUtils.secondLevel = conversionToSeconds
-        CountDownTimer.secondLevel = conversionToSeconds
     }
 }

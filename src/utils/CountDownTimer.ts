@@ -13,9 +13,7 @@ export class CountDownTimer {
 
     private readonly onEndCallback?: (id: string) => void
 
-    public static secondLevel: number = 1
-
-    constructor(second: number, callback: (residueDegree: number) => void,countdownId: string,onEndCallback?:(id: string) => void) {
+    constructor(second: number, callback: (residueDegree: number) => void,onEndCallback?:(id: string) => void,countdownId?: string) {
         this.second = second
         this.callback = callback
         this.countdownId = countdownId || UuIdUtils.getInstance().generateUuid(64)
@@ -35,7 +33,7 @@ export class CountDownTimer {
     startCountdown() {
         this.checkCurrentTimer()
         this.timer = setInterval(() => {
-            this.second = this.second - CountDownTimer.secondLevel
+            this.second = this.second - 1
             if (this.second <= 0) {
                 if (this.onEndCallback) {
                     this.onEndCallback(this.countdownId)
