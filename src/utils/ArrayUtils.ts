@@ -1,5 +1,6 @@
-import { Assert } from '../validator/Assert'
-import { Matcher } from '../inteface/Matcher'
+import {Assert} from '../validator/Assert'
+import {Matcher} from '../inteface/Matcher'
+import {BaseObjectArrayMatcher} from "../inteface/BaseObjectArrayMatcher"
 
 export class ArrayUtils {
     public static isEmpty<T>(arr: T[]) {
@@ -36,8 +37,8 @@ export class ArrayUtils {
         let pagingList: T[]
         if (page === 1) {
             pagingList = newPageList
-        }else {
-            pagingList = [ ...oldPageList, ...newPageList ]
+        } else {
+            pagingList = [...oldPageList, ...newPageList]
         }
         return pagingList
     }
@@ -56,7 +57,7 @@ export class ArrayUtils {
         return item
     }
 
-    public static isSameLength<T,V>(arr: T[], arr2: V[]) {
+    public static isSameLength<T, V>(arr: T[], arr2: V[]) {
         return arr.length === arr2.length
     }
 
@@ -65,6 +66,37 @@ export class ArrayUtils {
         const sliced = arr.slice(index + 1)
         arr.length = index
         arr.push.apply(arr, sliced)
+    }
+
+    public static getItemIndexById<T extends BaseObjectArrayMatcher>(arr: Array<T>, id: string) {
+        let index = -1
+        for (let i = 0; i < arr.length; i++) {
+            const item = arr[i]
+            if (item.id === id) {
+                index = i
+                break
+            }
+        }
+        return index
+    }
+
+    public static getItemById<T extends BaseObjectArrayMatcher>(arr: Array<T>, id: string, classReference: {
+        new(): T
+    }) {
+        let newItem = new classReference()
+        for (let i = 0; i < arr.length; i++) {
+            const item = arr[i]
+            if (id === item.id) {
+                newItem = item
+                break
+            }
+        }
+        return newItem
+    }
+
+    public static deleteItemById<T extends BaseObjectArrayMatcher>(arr: Array<T>, id: string) {
+        const index = this.getItemIndexById(arr, id)
+        this.delElByIndex(arr, index)
     }
 
     public static manualPaging<T>(arr: Array<T>, limit: number = 10) {
@@ -76,14 +108,14 @@ export class ArrayUtils {
     }
 
     public static sortByTimestamp<T extends object>(property: string, isRise: boolean) {
-        return function(currentArrayItem: T, changeArrayItem: T) {
+        return function (currentArrayItem: T, changeArrayItem: T) {
             // @ts-ignore
             const currentArrayProperty = <any>currentArrayItem[property]
             // @ts-ignore
             const changeArrayProperty = <any>changeArrayItem[property]
             if (isRise) {
                 return currentArrayProperty - changeArrayProperty
-            }else {
+            } else {
                 return changeArrayProperty - currentArrayProperty
             }
         }

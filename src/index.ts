@@ -32,6 +32,8 @@ export { ConcurrentHashMap } from './map/ConcurrentHashMap'
 
 export { UuIdUtils } from './utils/UuIdUtils'
 export { CountDownTimer } from './utils/CountDownTimer'
+export { UserSexEnum,UserSexList } from './definition/UserSex'
+export { BaseObjectArrayMatcher } from './inteface/BaseObjectArrayMatcher'
 
 
 
