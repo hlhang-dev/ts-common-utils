@@ -22,6 +22,16 @@ export class CountDownTimer {
         }
     }
 
+    public updateCountDownTimer (second: number) {
+        if (this.timer) {
+            this.second = second
+            this.pauseCountdown()
+            this.startCountdown()
+        }
+
+
+    }
+
     private checkCurrentTimer() {
         let second = 0
         if (SystemTimerMap.has(this.countdownId)) {

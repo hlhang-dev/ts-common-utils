@@ -56,7 +56,7 @@ export class ArrayUtils {
         return item
     }
 
-    public static isSameLength<T>(arr: T[], arr2: T[]) {
+    public static isSameLength<T,V>(arr: T[], arr2: V[]) {
         return arr.length === arr2.length
     }
 

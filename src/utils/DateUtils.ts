@@ -5,7 +5,7 @@ export class DateUtils {
 
     private static nowDate: Date
 
-    public static getInstance(timeStamp: number) {
+    public static getInstance(timeStamp: number = 0) {
         if (!DateUtils._instance) {
             DateUtils._instance = new DateUtils()
         }

@@ -6,6 +6,6 @@ export class StringToNumConverter implements JsonCustomConvert<number> {
     return null
   }
   deserialize (data: string): number {
-    return parseInt(data,10)
+    return (parseInt(data,10) || 0)
   }
 }
