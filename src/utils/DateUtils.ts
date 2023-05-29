@@ -32,7 +32,7 @@ export class DateUtils {
 
     public formatterYMDhmsByTimeStamp(): string {
         let date = DateUtils.nowDate
-        let YMDhm = this.formatterYMDhmByTimeStamp()
+        let YMDhm = this.formatterYMDhmByTimeStamp() + ':'
         let s = date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds()
         return YMDhm + s
     }
