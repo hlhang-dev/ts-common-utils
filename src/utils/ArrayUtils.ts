@@ -1,6 +1,6 @@
-import {Assert} from '../validator/Assert'
-import {Matcher} from '../inteface/Matcher'
-import {BaseObjectArrayMatcher} from "../inteface/BaseObjectArrayMatcher"
+import { Assert }                 from '../validator/Assert'
+import { Matcher }                from '../inteface/Matcher'
+import { BaseObjectArrayMatcher } from '../inteface/BaseObjectArrayMatcher'
 
 export class ArrayUtils {
     public static isEmpty<T>(arr: T[]) {
@@ -137,5 +137,13 @@ export class ArrayUtils {
             }
         }
         return newArr
+    }
+
+    public static getRandomIndexInArray<T>(arr: T[]): number {
+        let index = -1
+        if (arr.length !== 0) {
+            index = Math.floor(Math.random() * arr.length)
+        }
+        return index
     }
 }

@@ -8,6 +8,8 @@ export { FileUtils } from './utils/FileUtils'
 export { NumberUtils } from './utils/NumberUtils'
 export { UtilsInit } from './utils/UtilsInit'
 
+export { NumberUUIDGenerator } from './utils/NumberUUIDGenerator'
+
 
 export { Assert } from './validator/Assert'
 export { Exception } from './exception/Exception'
